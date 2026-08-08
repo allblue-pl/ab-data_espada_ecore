@@ -1,16 +1,7 @@
-'use strict';
+import abData, { DataScheme } from "ab-data";
+import { abdFields as f } from "ab-data";
 
-const
-    abData = require('ab-data'),
-    js0 = require('js0'),
-
-    f = abData.fields,
-    v = abData.validators
-;
-
-module.exports = function (ds, tableId) {
-    js0.args(arguments, abData.DataScheme, 'int');
-
+export default function abData_Espada_ECore(ds: DataScheme, tableId: number): void {
     let dsFn = () => {
         ds
             .defT(tApp_Infos)
