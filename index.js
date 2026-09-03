@@ -1,17 +1,17 @@
 import abData, { DataScheme } from "ab-data";
 import { abdFields as f } from "ab-data";
 
-export default function abData_Espada_ECore(ds: DataScheme, tableId: number): void {
+export default function abData_Espada_ECore(ds            , tableId        )       {
     let dsFn = () => {
         ds
-            .defTable(tApp_Infos)
-            .defTable(tCache_Files)
-            .defTable(tConfig_Settings)
-            .defTable(tLog_Logs)
-            .defTable(tSession_Sessions)
-            .defTable(tTasks_Tasks)
-            .defTable(tUsers_ResetPasswordHashes)
-            .defTable(tUsers_Users)
+            .defT(tApp_Infos)
+            .defT(tCache_Files)
+            .defT(tConfig_Settings)
+            .defT(tLog_Logs)
+            .defT(tSession_Sessions)
+            .defT(tTasks_Tasks)
+            .defT(tUsers_ResetPasswordHashes)
+            .defT(tUsers_Users)
     }
 
     let tApp_Infos = new abData.TableDef(tableId++, 'App_Infos', 'a_i', [
