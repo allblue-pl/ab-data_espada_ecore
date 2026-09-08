@@ -78,7 +78,7 @@ export default function abData_Espada_ECore(ds: DataScheme, tableId: number): vo
     let tUsers_Users = new abData.TableDef(tableId++, 'Users_Users', 
             'u_u', [
         [ 'Id',             f.Long({ notNull: true, }) ],
-        [ 'Type',           f.String(16, { notNull: true, }) ],
+        [ 'Type',           f.Int({ notNull: true, }) ],
         [ 'LoginHash',      f.String(256, { notNull: true, }) ],
         [ 'EmailHash',      f.String(256, { notNull: true, }) ],
         [ 'PasswordHash',   f.String(256, { notNull: true, }) ],

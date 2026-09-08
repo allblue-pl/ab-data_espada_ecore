@@ -4,14 +4,14 @@ import { abdFields as f } from "ab-data";
 export default function abData_Espada_ECore(ds            , tableId        )       {
     let dsFn = () => {
         ds
-            .defT(tApp_Infos)
-            .defT(tCache_Files)
-            .defT(tConfig_Settings)
-            .defT(tLog_Logs)
-            .defT(tSession_Sessions)
-            .defT(tTasks_Tasks)
-            .defT(tUsers_ResetPasswordHashes)
-            .defT(tUsers_Users)
+            .defTable(tApp_Infos)
+            .defTable(tCache_Files)
+            .defTable(tConfig_Settings)
+            .defTable(tLog_Logs)
+            .defTable(tSession_Sessions)
+            .defTable(tTasks_Tasks)
+            .defTable(tUsers_ResetPasswordHashes)
+            .defTable(tUsers_Users)
     }
 
     let tApp_Infos = new abData.TableDef(tableId++, 'App_Infos', 'a_i', [
@@ -78,7 +78,7 @@ export default function abData_Espada_ECore(ds            , tableId        )    
     let tUsers_Users = new abData.TableDef(tableId++, 'Users_Users', 
             'u_u', [
         [ 'Id',             f.Long({ notNull: true, }) ],
-        [ 'Type',           f.String(16, { notNull: true, }) ],
+        [ 'Type',           f.Int({ notNull: true, }) ],
         [ 'LoginHash',      f.String(256, { notNull: true, }) ],
         [ 'EmailHash',      f.String(256, { notNull: true, }) ],
         [ 'PasswordHash',   f.String(256, { notNull: true, }) ],
