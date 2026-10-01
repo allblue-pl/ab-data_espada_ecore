@@ -85,6 +85,7 @@ export function abData_Espada_ECore_DB(ds: DataScheme, tableId: number):
         [ 'PasswordHash',   f.String(256, { notNull: true, }) ],
         [ 'Groups',         f.String(128, { notNull: true, }) ],
         [ 'Active',         f.Bool({ notNull: true, }) ],
+        [ 'Confirmed',      f.Bool({ notNull: true, }) ],
             ])
         .setPKs([ 'Id' ])
         .setIndexes({

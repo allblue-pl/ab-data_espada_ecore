@@ -1,7 +1,7 @@
 import abData, { DataScheme } from "ab-data";
 import { abdFields as f } from "ab-data";
-import { abData_Espada_ECore_DB } from "./db.js";
-import { abData_Espada_ECore_Types } from "./types.js";
+import { abData_Espada_ECore_DB } from "./abData_Espada_ECore_DB.js";
+import { abData_Espada_ECore_Types } from "./abData_Espada_ECore_Types.js";
 
 export default function abData_Espada_ECore(ds            , tableId        )  
              {
